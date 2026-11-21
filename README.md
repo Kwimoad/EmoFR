@@ -2,7 +2,7 @@
 
 EmoFR est une application web permettant d'analyser l'émotion exprimée dans une phrase en français.
 
-Elle utilise le modèle **CamemBERT fine-tuné** `AbdelkarimAouad/camembert-emofr`, chargé directement depuis Hugging Face en mémoire avec Transformers et Torch.
+Elle utilise le modèle **CamemBERT fine-tuné** `AbdelkarimAouad/camembert-emofr` [🔗](https://huggingface.co/AbdelkarimAouad/camembert-emofr), chargé directement depuis Hugging Face en mémoire avec Transformers et Torch.
 
 ![Interface EmoFR](figures/interface.png)
 
