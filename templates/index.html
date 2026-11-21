@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EmoFR - Analyse d'émotions</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css', v='2') }}">
+</head>
+<body>
+    <main class="app-shell">
+        <header class="hero">
+            <div class="brand-mark" aria-hidden="true">e.</div>
+            <div>
+                <p class="eyebrow">Analyse linguistique française</p>
+                <h1>EmoFR</h1>
+            </div>
+        </header>
+
+        <section class="analyzer" aria-labelledby="analyzer-title">
+            <div class="section-heading">
+                <div>
+                    <p class="step">01 / Analyse</p>
+                    <h2 id="analyzer-title">Quelle émotion exprime ce texte ?</h2>
+                </div>
+                <span id="modelStatus" class="status">Mode démonstration</span>
+            </div>
+
+            <form id="predictionForm">
+                <label for="textInput">Votre phrase</label>
+                <textarea id="textInput" maxlength="1000" rows="5"
+                    placeholder="Écrivez une phrase en français..." required></textarea>
+                <div class="form-footer">
+                    <span id="characterCount">0 / 1000</span>
+                    <button type="submit" id="submitButton">
+                        <span>Analyser</span>
+                        <span aria-hidden="true">→</span>
+                    </button>
+                </div>
+            </form>
+        </section>
+
+        <section id="resultSection" class="result" aria-live="polite" hidden>
+            <div class="result-meta">
+                <p class="step">02 / Résultat</p>
+                <p id="methodName"></p>
+            </div>
+            <div class="result-content">
+                <div>
+                    <p>Émotion détectée</p>
+                    <h2 id="emotionName">—</h2>
+                </div>
+                <div class="confidence">
+                    <div class="confidence-value">
+                        <strong id="confidenceValue">—</strong>
+                        <span>confiance</span>
+                    </div>
+                    <div class="confidence-track">
+                        <div id="confidenceBar"></div>
+                    </div>
+                </div>
+            </div>
+            <blockquote id="analyzedText"></blockquote>
+        </section>
+    </main>
+
+    <script src="{{ url_for('static', filename='app.js') }}"></script>
+</body>
+</html>

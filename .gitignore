@@ -1,0 +1,41 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Environments
+.venv/
+venv/
+env/
+.env
+.python-version
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Training artifacts and generated outputs
+camembert-emofr/
+models/
+*.joblib
+*.pkl
+*.pt
+*.pth
+*.safetensors
+*.bin
+f1_par_classe.png
+confusion.png
+analyse_erreurs.csv
+
+# IDE and operating system
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Logs and caches
+*.log
+.cache/
+.huggingface/
